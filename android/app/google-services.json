@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "882841619074",
+    "project_id": "e-commerce-a8d82",
+    "storage_bucket": "e-commerce-a8d82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882841619074:android:0065f59879747931a9429b",
+        "android_client_info": {
+          "package_name": "com.motasemzd.e_commerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882841619074-uuudgoik4pldpcselmb0cnhj3ae0bit7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANqvCLqnASPVrvoIv_L43w9t66fH9eki4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882841619074-uuudgoik4pldpcselmb0cnhj3ae0bit7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

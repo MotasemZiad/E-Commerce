@@ -150,6 +150,7 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Container(
                               height: 220.0,
+                              width: 242.0,
                               child: Image.network(
                                 controller.productModel[index].image,
                                 fit: BoxFit.fill,

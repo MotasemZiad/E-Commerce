@@ -17,13 +17,14 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: FlatButton(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(kButtonBorderRadius),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: color,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(kButtonBorderRadius),
+          ),
+          padding: EdgeInsets.all(15),
         ),
-        color: color,
-        colorBrightness: Brightness.dark,
-        padding: EdgeInsets.all(15),
         onPressed: onPressed,
         child: CustomText(
           text: text,

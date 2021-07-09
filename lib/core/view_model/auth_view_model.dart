@@ -14,17 +14,17 @@ class AuthViewModel extends GetxController {
   FirebaseAuth _auth = FirebaseAuth.instance;
 
   String email = '', password = '', username = '';
-  // Rx<User> _user = Rx<User>();
+  Rxn<User> _user = Rxn<User>();
 
   final LocalStorageData _localStorageData = Get.find();
 
-  // String get user => _user.value?.email;
+  String get user => _user.value?.email;
 
   @override
   void onInit() {
     print('onInit Called');
     super.onInit();
-    // _user.bindStream(_auth.authStateChanges());
+    _user.bindStream(_auth.authStateChanges());
     if (_auth.currentUser != null) {
       getCurrentUserData(_auth.currentUser.uid);
     }
@@ -44,7 +44,9 @@ class AuthViewModel extends GetxController {
 
   void createUserWithEmailAndPassword() async {
     try {
-      await _auth.createUserWithEmailAndPassword().then((user) async {
+      await _auth
+          .createUserWithEmailAndPassword(email: email, password: password)
+          .then((user) async {
         saveUserData(user);
       });
       Get.offAll(() => ControlView());
@@ -61,7 +63,9 @@ class AuthViewModel extends GetxController {
 
   void signInWithEmailAndPassword() async {
     try {
-      await _auth.signInWithEmailAndPassword().then((value) async {
+      await _auth
+          .signInWithEmailAndPassword(email: email, password: password)
+          .then((value) async {
         saveUserData(value);
         getCurrentUserData(value.user.uid);
       });
